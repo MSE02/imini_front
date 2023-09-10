@@ -1,10 +1,17 @@
 /* Styles pour les écrans de taille moyenne (largeur max de 900px) */
 @media screen and (max-width: 768px ) {
+  .container-fluid{
+    background:linear-gradient(180deg,white,rgb(220, 255, 255));
+  }
 #div_center_container{
   margin-bottom: 10%;
 }
 }
-
+@media screen and (min-width: 768px ){
+  .container-fluid{
+    background:linear-gradient(90deg,white,rgb(220, 255, 255));
+  }
+}
 img {
   width: 100%; /* L'image occupera la largeur totale de son conteneur parent */
   max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
