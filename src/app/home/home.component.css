@@ -1,21 +1,8 @@
 /* Styles pour les écrans de taille moyenne (largeur max de 900px) */
-@media screen and (max-width: 900px) {
-  .row {
-    padding: 20px; /* Ajoutez un espacement autour du contenu pour une meilleure lisibilité */
-  }
-  h1 {
-    font-size: 34px; /* Réduisez la taille de la police pour les écrans plus petits */
-  }
+@media screen and (max-width: 768px ) {
+#div_center_container{
+  margin-bottom: 10%;
 }
-
-/* Styles pour les écrans de petite taille (largeur max de 600px) */
-@media screen and (max-width: 600px) {
-  .row {
-    padding: 20px; /* Réduisez davantage l'espacement pour les écrans très petits */
-  }
-  h1 {
-    font-size: 34px; /* Réduisez encore la taille de la police pour les écrans très petits */
-  }
 }
 
 img {
