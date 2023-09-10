@@ -1,57 +1,25 @@
-.home {
-    padding: 20px;
+/* Styles pour les écrans de taille moyenne (largeur max de 900px) */
+@media screen and (max-width: 900px) {
+  .row {
+    padding: 20px; /* Ajoutez un espacement autour du contenu pour une meilleure lisibilité */
   }
-  
-  .banner {
-    text-align: center;
-    background-color: #f5f5f5;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  h1 {
+    font-size: 34px; /* Réduisez la taille de la police pour les écrans plus petits */
   }
-  
-  .banner h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
+}
+
+/* Styles pour les écrans de petite taille (largeur max de 600px) */
+@media screen and (max-width: 600px) {
+  .row {
+    padding: 20px; /* Réduisez davantage l'espacement pour les écrans très petits */
   }
-  
-  .btn-donate {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
+  h1 {
+    font-size: 34px; /* Réduisez encore la taille de la police pour les écrans très petits */
   }
-  
-  .btn-donate:hover {
-    background-color: #0056b3;
-  }
-  
-  .about-section, .projects-section {
-    margin-top: 40px;
-  }
-  
-  .project-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-  }
-  
-  .project-card img {
-    max-width: 100%;
-    border-radius: 4px;
-    margin-bottom: 10px;
-  }
-  
-  .project-card h3 {
-    font-size: 20px;
-    margin: 0;
-  }
-  
-  .project-card p {
-    color: #666;
-  }
-  
+}
+
+img {
+  width: 100%; /* L'image occupera la largeur totale de son conteneur parent */
+  max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
+  height: auto; /* Laisse la hauteur s'ajuster automatiquement pour conserver les proportions */
+}
