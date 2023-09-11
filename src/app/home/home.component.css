@@ -1,19 +1,86 @@
 /* Styles pour les écrans de taille moyenne (largeur max de 900px) */
-@media screen and (max-width: 768px ) {
-  .container-fluid{
-    background:linear-gradient(180deg,white,rgb(220, 255, 255));
+@media screen and (max-width: 768px) {
+  #container-fluid-1 {
+    background: linear-gradient(180deg, white, rgb(220, 255, 255));
   }
-#div_center_container{
-  margin-bottom: 10%;
+  #div_center_container {
+    margin-bottom: 10%;
+  }
 }
-}
-@media screen and (min-width: 768px ){
-  .container-fluid{
-    background:linear-gradient(90deg,white,rgb(220, 255, 255));
+@media screen and (min-width: 768px) {
+  #container-fluid-1 {
+    background: linear-gradient(90deg, white, rgb(220, 255, 255));
   }
 }
 img {
-  width: 100%; /* L'image occupera la largeur totale de son conteneur parent */
-  max-width: 100%; /* Assurez-vous que l'image ne dépasse pas la largeur de son conteneur */
-  height: auto; /* Laisse la hauteur s'ajuster automatiquement pour conserver les proportions */
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.btn_don {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 50px;
+  padding-right: 50px;
+  -webkit-transition: color, background-color 0.3s linear;
+  transition: color, background-color 0.3s linear;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: #055064;
+  border-color: #055064;
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 16px;
+  display: inline-block;
+}
+.btn_don:hover {
+  background-color: white;
+  color: #055064;
+}
+/* styles.css */
+
+.donation-section {
+  padding: 5%;
+  background-color: rgb(244, 247, 248);
+  text-align: center;
+  margin: 5%;
+  border-radius: 3%;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.086);
+}
+
+.donation-item {
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 13%;
+}
+
+.donation-item i {
+  font-size: 48px; /* Taille de police des icônes */
+  color: #054f64; /* Couleur des icônes */
+}
+
+.donation-item h3 {
+  font-size: 24px; /* Taille de police des titres */
+  margin-top: 20px; /* Espacement entre le titre et le texte */
+  color: #072b35; /* Couleur du titre */
+}
+
+.donation-item p {
+  font-size: 18px; /* Taille de police du texte */
+  color: #666; /* Couleur du texte */
 }
