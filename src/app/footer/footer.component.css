@@ -1,0 +1,9 @@
+@media screen and (max-width: 768px) {
+  .resize-mid {
+    margin-top: 47px;
+  }
+  .resize {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}

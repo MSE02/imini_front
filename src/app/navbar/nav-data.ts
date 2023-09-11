@@ -1,22 +1,22 @@
 export const navbarData = [
     {
       label: 'Nous connaître',
-      routeLink: '/',
+      routeLink: '',
       submenus: []
     },
     {
       label: 'Actions',
-      routeLink: '/projets',
+      routeLink: 'projets',
       submenus: []
     },
     {
       label: 'Membres',
-      routeLink: '/membres',
+      routeLink: 'membres',
       submenus: []
     },
     {
       label: 'Dons',
-      routeLink: '/dons',
+      routeLink: 'donation',
       submenus: []
     },
   ];
