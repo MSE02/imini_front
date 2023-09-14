@@ -1,0 +1,208 @@
+.BG_container {
+  margin-top: 20px;
+  height: 100%;
+  width: 70%;
+  border-radius: 10px;
+}
+
+.donation_forum {
+  padding: 37px 0px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.don-form {
+  background-color: rgba(255, 255, 255, 0.9); /* Fond semi-transparent */
+  padding: 35px;
+  margin-left: 30%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  width: fit-content;
+}
+
+/* Style pour les étiquettes des champs */
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style pour les champs de saisie */
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  font-size: 14px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  border-color: #055064; /* Couleur du champ en focus */
+}
+
+/* Hide the spinner for number input */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
+/* Style pour le bouton de soumission */
+button[type="submit"] {
+  align-self: flex-start;
+  width: 70%;
+  background-color: #055064; /* Couleur du bouton */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color, background-color 0.1s linear;
+}
+
+button[type="submit"]:hover {
+  background-color: #fff;
+  color: #055064;
+}
+
+.grid-form {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  gap: 10px;
+}
+
+.grid-item {
+  grid-column-end: span 1;
+  display: flex;
+  flex-direction: column;
+}
+.grid-item-full {
+  grid-column-end: span 2;
+  width: 100%;
+  margin-bottom: 15px; /* Espacement en bas du champ */
+}
+
+/* Style du conteneur principal */
+.donation-amount {
+  border-radius: 10px;
+  background-color: rgba(190, 209, 210, 0.168);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style des boutons de don */
+.donation-buttons {
+  padding: 10px;
+  display: flex;
+  gap: 16px 16px; /* Espacement horizontal entre les boutons */
+  align-items: center;
+}
+
+.donation-button {
+  background-color: whitesmoke;
+  color: #055064; /* Couleur du texte */
+  padding: 10px 15px; /* Espacement à l'intérieur du bouton */
+  border: none; /* Suppression de la bordure */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur au survol */
+  text-align: center;
+  transition: color, background-color 0.1s linear;
+}
+
+.donation-button:focus {
+  background-color: #055064;
+  color: #ccc;
+}
+
+/* Style du conteneur principal */
+.donation-amount {
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style des boutons de don */
+.donation-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+  grid-template-rows: repeat(2, 1fr); /* 2 lignes égales */
+  gap: 16px; /* Espacement horizontal entre les éléments */
+  align-items: center;
+}
+
+/* Style de la valeur du montant */
+.donation-amount-value {
+  font-weight: bold;
+}
+
+/* Style de la devise */
+.donation-currency {
+  font-style: italic;
+}
+
+/* Style de la zone de saisie personnalisée */
+.custom-amount {
+  grid-column: span 2; /* Cette ligne occupe 2 colonnes */
+  text-align: center; /* Centre le champ de saisie */
+}
+
+.custom-amount-input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Remplit la largeur disponible */
+}
+
+@media screen and (max-width: 992px) {
+  .BG_container {
+    width: 100%;
+  }
+
+  .donation_forum {
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .don-form {
+    width: auto;
+    margin-right: 0;
+    margin-left: 0;
+    border-radius: 0;
+  }
+}
+
+@media screen and (min-width: 639px) {
+  .BG_container {
+    background-image: url("../../assets/donation_img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    background-attachment: local;
+  }
+
+}
+@media screen and (max-width: 639px) {
+  .donation_forum{
+    display: inline;
+  }
+  .grid-form{
+    display: block;
+  }
+  .donation-button{
+    padding: 12px 17px;
+  }
+  
+}

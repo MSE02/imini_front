@@ -1,32 +1,80 @@
-<div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h2>Faire un Don</h2>
-        <form>
-          <!-- Les champs du formulaire de don (montant, nom, email, etc.) -->
-          <div class="form-group">
-            <label for="montant">Montant du Don:</label>
-            <input type="number" class="form-control" id="montant" name="montant">
+<div [ngClass]="{'container': isScreenSizeLarge}" class="BG_container">
+  <form action="">
+    <div class="donation_forum">
+      <div class="don-form">
+        <p
+          style="
+            text-align: center;
+            height: 30px;
+            font-size: 30px;
+            margin-bottom: 15%;
+            color: #073643;
+          "
+        >
+          Faire un don
+        </p>
+        <div class="donation-amount">
+          <div class="donation-buttons">
+            <button type="button" class="donation-button">
+              50 <span class="donation-currency">MAD</span>
+            </button>
+            <button type="button" class="donation-button">
+              100 <span class="donation-currency">MAD</span>
+            </button>
+            <button type="button" class="donation-button">
+              200 <span class="donation-currency">MAD</span>
+            </button>
+            <button type="button" class="donation-button">
+              300 <span class="donation-currency">MAD</span>
+            </button>
+            <div class="custom-amount" style="grid-column: span 2">
+              <input
+                required
+                type="number"
+                placeholder="Montant MAD"
+                class="custom-amount-input"
+                value=""
+                min="0"
+                style="margin-bottom: 0;"
+              />
+            </div>
           </div>
-          <div class="form-group">
-            <label for="nom">Nom:</label>
-            <input type="text" class="form-control" id="nom" name="nom">
+        </div>
+        <div class="grid-form">
+          <div class="grid-item">
+            <label for="firstName">Prénom :</label>
+            <input
+              type="text"
+              id="firstName"
+              formControlName="firstName"
+              required
+              placeholder="Prenom"
+            />
           </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" name="email">
+          <div class="grid-item">
+            <label for="lastName">Nom :</label>
+            <input
+              type="text"
+              id="lastName"
+              formControlName="lastName"
+              required
+              placeholder="Nom"
+            />
           </div>
-          <!-- Autres champs du formulaire de don -->
-          <!-- ... -->
-  
-          <!-- Bouton de soumission du formulaire -->
-          <button type="submit" class="btn btn-primary">Faire un Don</button>
-        </form>
+          <div class="grid-item-full">
+            <label for="email">E-mail :</label>
+            <input
+              type="email"
+              id="email"
+              formControlName="email"
+              required
+              placeholder="Email"
+            />
+          </div>
+        </div>
+        <button type="submit">Faire un Don</button>
       </div>
-      <div class="col-md-6">
-        <!-- Image ou informations supplémentaires sur le don -->
-        <img src="assets/donation-image.png" alt="Donation" class="img-fluid">
-      </div>
+      <br />
     </div>
-  </div>
-  
+  </form>
+</div>

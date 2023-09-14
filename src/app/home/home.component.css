@@ -47,7 +47,7 @@ img {
   display: inline-block;
 }
 .btn_don:hover {
-  background-color: white;
+  background-color:#0954693c;
   color: #055064;
 }
 /* styles.css */
@@ -57,7 +57,7 @@ img {
   background-color: rgb(244, 247, 248);
   text-align: center;
   margin: 5%;
-  border-radius: 3%;
+  border-radius: 10px;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.086);
 }
 
@@ -66,7 +66,7 @@ img {
   margin-bottom: 30px;
   background-color: white;
   padding: 20px;
-  border-radius: 13%;
+  border-radius: 10px;
 }
 
 .donation-item i {
