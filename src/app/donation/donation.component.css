@@ -20,13 +20,6 @@
   width: fit-content;
 }
 
-/* Style pour les étiquettes des champs */
-label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 5px;
-}
-
 /* Style pour les champs de saisie */
 input[type="text"],
 input[type="email"],
@@ -50,8 +43,7 @@ input[type="number"]:focus {
 /* Hide the spinner for number input */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  -moz-appearance: textfield;
+  appearance: none;
   margin: 0;
 }
 
@@ -75,8 +67,8 @@ button[type="submit"]:hover {
 }
 
 .grid-form {
+  width: 100%;
   display: grid;
-  grid-template-columns: 140px 140px;
   gap: 10px;
 }
 
@@ -188,21 +180,18 @@ button[type="submit"]:hover {
   .BG_container {
     background-image: url("../../assets/donation_img.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center right;
+    background-size: 100%;
     background-attachment: local;
   }
-
 }
 @media screen and (max-width: 639px) {
-  .donation_forum{
+  .donation_forum {
     display: inline;
   }
-  .grid-form{
+  .grid-form {
     display: block;
   }
-  .donation-button{
-    padding: 12px 17px;
+  .donation-button {
+    padding: 16px 7px;
   }
-  
 }
