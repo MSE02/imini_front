@@ -46,6 +46,9 @@ input[type="number"]::-webkit-outer-spin-button {
   appearance: none;
   margin: 0;
 }
+input[type="number"] {
+    -moz-appearance: textfield;
+}
 
 /* Style pour le bouton de soumission */
 button[type="submit"] {
@@ -178,7 +181,7 @@ button[type="submit"]:hover {
 
 @media screen and (min-width: 639px) {
   .BG_container {
-    background-image: url("../../assets/donation_img.jpg");
+    background-image: url("../../assets/donation_pic3.png");
     background-repeat: no-repeat;
     background-size: 100%;
     background-attachment: local;
