@@ -30,4 +30,22 @@ export class DonationComponent {
   onResize(event: Event): void {
     this.isScreenSizeLarge = window.innerWidth > 992;
   }
+
+  selectedAmount: number = 0;
+  selectAmount(amount: number) {
+    this.selectedAmount = amount;
+  }
+
+  chequeOpen: boolean = false;
+  bankOpen: boolean = false;
+
+  togglePaymentMethod(method: string) {
+    if (method === 'cheque') {
+      this.chequeOpen = !this.chequeOpen;
+    } else if (method === 'bankTransfer') {
+      this.bankOpen = !this.bankOpen;
+    }
+  }
+  
+
 }

@@ -4,7 +4,7 @@ import { navbarData } from './nav-data';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements AfterViewInit {
   navData = navbarData;
@@ -18,10 +18,8 @@ export class NavbarComponent implements AfterViewInit {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
       if (scrollTop > lastScrollTop) {
-        // L'utilisateur défile vers le bas, donc cachez la barre de navigation
         stickyNav.style.top = '-130px';
       } else {
-        // L'utilisateur défile vers le haut, donc affichez la barre de navigation
         stickyNav.style.top = '0';
       }
 

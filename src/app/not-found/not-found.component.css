@@ -55,7 +55,7 @@ div {
   transform: translate(-50%, -50%);
 }
 #notfound .notfound {
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -79,7 +79,7 @@ div {
 
 @media only screen and (max-width: 480px) {
   .notfound .notfound-404 {
-    position: relative;
+    position: absolute;
     width: 100%;
     margin-bottom: 15px;
   }
