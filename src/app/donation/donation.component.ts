@@ -36,6 +36,24 @@ export class DonationComponent {
     this.selectedAmount = amount;
   }
 
+  toggle_icon_transform_1() {
+    let x = document.getElementById('toggle-icon-1')!;
+    if (x.style.transform === 'rotate(-180deg)') {
+      x.style.transform = 'rotate(0deg)';
+    } else {
+      x.style.transform = 'rotate(-180deg)';
+    }
+  }
+  toggle_icon_transform_2() {
+    let x = document.getElementById('toggle-icon-2')!;
+    if (x.style.transform === 'rotate(-180deg)') {
+      x.style.transform = 'rotate(0deg)';
+    } else {
+      x.style.transform = 'rotate(-180deg)';
+    }
+  }
+  
+
   chequeOpen: boolean = false;
   bankOpen: boolean = false;
 
@@ -46,6 +64,4 @@ export class DonationComponent {
       this.bankOpen = !this.bankOpen;
     }
   }
-  
-
 }

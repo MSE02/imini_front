@@ -90,15 +90,26 @@
     </div>
   </form>
 </div>
-<div class="container">
+<div class="container-fluid">
   <div class="payment-method">
-    <div class="payment-header" (click)="togglePaymentMethod('cheque')">
-      Chèque
-      <span class="toggle-icon" [class.rotated]="chequeOpen"
-        ><i class="fa-solid fa-angle-up fa-beat"></i
-      ></span>
+    <div
+      (click)="toggle_icon_transform_1()"
+      (click)="togglePaymentMethod('cheque')"
+      class="payment-header"
+    >
+      <div style="display: flex">
+        <span> <i class="fa-solid fa-money-check-dollar"></i> Chèque </span>
+      </div>
+
+      <span id="toggle-icon-1" class="toggle-icon"
+        ><i class="fa-solid fa-angle-up fa-beat"></i>
+      </span>
     </div>
-    <div class="payment-body" [class.open]="chequeOpen">
+    <div
+      style="padding: 0px 10px"
+      [class.open]="chequeOpen"
+      class="payment-body"
+    >
       <p>Pour payer par chèque, envoyez le chèque à l'adresse suivante :</p>
       <p>Adresse : [Adresse]</p>
       <p>Assurez-vous de mentionner "Donation" au dos du chèque.</p>
@@ -106,13 +117,25 @@
   </div>
 
   <div class="payment-method">
-    <div class="payment-header" (click)="togglePaymentMethod('bankTransfer')">
-      Virement Bancaire
-      <span class="toggle-icon" [class.rotated]="bankOpen"
+    <div
+      (click)="toggle_icon_transform_2()"
+      class="payment-header"
+      (click)="togglePaymentMethod('bankTransfer')"
+    >
+      <div style="display: flex">
+        <span
+          ><img
+            style="height: 20px"
+            src="../../assets/Roundicons-100-Free-Solid-Bank-transfer.512.png"
+            alt="virement icon"
+        /></span>
+        Chèque Virement Bancaire
+      </div>
+      <span id="toggle-icon-2" class="toggle-icon"
         ><i class="fa-solid fa-angle-up fa-beat"></i
       ></span>
     </div>
-    <div class="payment-body" [class.open]="bankOpen">
+    <div style="padding: 0px 10px" [class.open]="bankOpen" class="payment-body">
       <p>
         Pour effectuer un virement bancaire, utilisez les informations bancaires
         suivantes :
