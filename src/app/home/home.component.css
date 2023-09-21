@@ -1,7 +1,7 @@
 /* Styles pour les écrans de taille moyenne (largeur max de 900px) */
 @media screen and (max-width: 768px) {
   #container-fluid-1 {
-    background: linear-gradient(180deg, white, rgb(220, 255, 255));
+    background: linear-gradient(180deg, #F5F5F5, rgb(220, 255, 255));
   }
   #div_center_container {
     margin-bottom: 10%;
@@ -9,7 +9,7 @@
 }
 @media screen and (min-width: 768px) {
   #container-fluid-1 {
-    background: linear-gradient(90deg, white, rgb(220, 255, 255));
+    background: linear-gradient(90deg, #F5F5F5, rgb(220, 255, 255));
   }
 }
 img {
@@ -47,7 +47,7 @@ img {
   display: inline-block;
 }
 .btn_don:hover {
-  background-color:#0954693c;
+  background-color:white;
   color: #055064;
 }
 /* styles.css */

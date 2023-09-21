@@ -12,15 +12,14 @@
 }
 
 .don-form {
-  background-color: rgba(255, 255, 255, 0.9); /* Fond semi-transparent */
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 35px;
   margin-left: 30%;
   border-radius: 10px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   width: fit-content;
 }
 
-/* Style pour les champs de saisie */
 input[type="text"],
 input[type="email"],
 input[type="number"] {
@@ -37,10 +36,9 @@ input[type="number"] {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="number"]:focus {
-  border-color: #055064; /* Couleur du champ en focus */
+  border-color: #055064;
 }
 
-/* Hide the spinner for number input */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   appearance: none;
@@ -51,11 +49,10 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-/* Style pour le bouton de soumission */
 button[type="submit"] {
   align-self: flex-start;
   width: 70%;
-  background-color: #055064; /* Couleur du bouton */
+  background-color: #055064;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -84,10 +81,9 @@ button[type="submit"]:hover {
 .grid-item-full {
   grid-column-end: span 2;
   width: 100%;
-  margin-bottom: 15px; /* Espacement en bas du champ */
+  margin-bottom: 15px;
 }
 
-/* Style du conteneur principal */
 .donation-amount {
   border-radius: 10px;
   background-color: rgba(190, 209, 210, 0.168);
@@ -96,21 +92,20 @@ button[type="submit"]:hover {
   align-items: center;
 }
 
-/* Style des boutons de don */
 .donation-buttons {
   padding: 10px;
   display: flex;
-  gap: 16px 16px; /* Espacement horizontal entre les boutons */
+  gap: 16px 16px;
   align-items: center;
 }
 
 .donation-button {
   background-color: whitesmoke;
-  color: #055064; /* Couleur du texte */
-  padding: 10px 15px; /* Espacement à l'intérieur du bouton */
-  border: none; /* Suppression de la bordure */
-  border-radius: 5px; /* Coins arrondis */
-  cursor: pointer; /* Curseur au survol */
+  color: #055064;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   text-align: center;
   transition: color, background-color 0.1s linear;
 }
@@ -120,7 +115,6 @@ button[type="submit"]:hover {
   color: #ccc;
 }
 
-/* Style du conteneur principal */
 .donation-amount {
   margin-bottom: 10%;
   display: flex;
@@ -128,38 +122,34 @@ button[type="submit"]:hover {
   align-items: center;
 }
 
-/* Style des boutons de don */
 .donation-buttons {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
-  grid-template-rows: repeat(2, 1fr); /* 2 lignes égales */
-  gap: 16px; /* Espacement horizontal entre les éléments */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 16px;
   align-items: center;
 }
 
-/* Style de la valeur du montant */
 .donation-amount-value {
   font-weight: bold;
 }
 
-/* Style de la devise */
 .donation-currency {
   font-style: italic;
   font-size: 8px;
   margin-left: 0px;
 }
 
-/* Style de la zone de saisie personnalisée */
 .custom-amount {
-  grid-column: span 2; /* Cette ligne occupe 2 colonnes */
-  text-align: center; /* Centre le champ de saisie */
+  grid-column: span 2;
+  text-align: center;
 }
 
 .custom-amount-input {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 100%; /* Remplit la largeur disponible */
+  width: 100%;
 }
 
 @media screen and (max-width: 992px) {
@@ -203,12 +193,14 @@ button[type="submit"]:hover {
   }
 }
 
+/* style autre methode */
+
 .payment-method {
-  background-color: white;
-  margin-top: 10px;
+  margin:20px 0px;
 }
 
 .payment-header {
+  width: 70%;
   display: flex;
   position: relative;
   cursor: pointer;
@@ -221,7 +213,7 @@ button[type="submit"]:hover {
 
 .payment-body {
   background-color: white;
-
+  width: 70%;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
@@ -235,4 +227,13 @@ button[type="submit"]:hover {
 .toggle-icon {
   transform: rotate(0deg);
   transition: transform 0.3s linear 0s;
+}
+
+@media screen and (max-width: 639px) {
+  .payment-body {
+    width: 100%;
+  }
+  .payment-header {
+    width: 100%;
+  }
 }
