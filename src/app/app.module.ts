@@ -11,6 +11,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { DonationComponent } from './donation/donation.component';
 import { BodyComponent } from './body/body.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { PaypalComponent } from './paypal/paypal.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AboutUsComponent,
     DonationComponent,
     BodyComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PaypalComponent
   ],
   imports: [
     ReactiveFormsModule,

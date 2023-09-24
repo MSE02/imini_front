@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms'; // Importez
 })
 export class DonationComponent {
   donationForm: FormGroup; // Définissez votre formulaire ici
+  static selectedAmount: any;
 
   constructor(private formBuilder: FormBuilder) {
     // Créez le formulaire dans le constructeur
@@ -21,7 +22,7 @@ export class DonationComponent {
 
   onSubmit() {
     // Logique de soumission du formulaire ici
-    alert('Formulaire soumis !');
+    alert(`Formulaire soumis !${this.selectedAmount}`);
   }
 
   isScreenSizeLarge = window.innerWidth > 992;
@@ -52,7 +53,6 @@ export class DonationComponent {
       x.style.transform = 'rotate(-180deg)';
     }
   }
-  
 
   chequeOpen: boolean = false;
   bankOpen: boolean = false;
