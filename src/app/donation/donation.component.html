@@ -1,0 +1,147 @@
+<div class="BG_container">
+  <form [formGroup]="donationForm" (ngSubmit)="onSubmit()">
+    <div class="donation_forum">
+      <div class="don-form">
+        <p
+          style="
+            text-align: center;
+            height: 30px;
+            font-size: 30px;
+            margin-bottom: 15%;
+            color: #073643;
+          "
+        >
+          Faire un don
+        </p>
+        <div class="donation-amount">
+          <div class="donation-buttons">
+            <button
+              type="button"
+              (click)="selectAmount(50)"
+              class="donation-button"
+            >
+              50 <span class="donation-currency">MAD</span>
+            </button>
+            <button
+              type="button"
+              (click)="selectAmount(100)"
+              class="donation-button"
+            >
+              100 <span class="donation-currency">MAD</span>
+            </button>
+            <button
+              type="button"
+              (click)="selectAmount(200)"
+              class="donation-button"
+            >
+              200 <span class="donation-currency">MAD</span>
+            </button>
+            <button
+              type="button"
+              (click)="selectAmount(300)"
+              class="donation-button"
+            >
+              300 <span class="donation-currency">MAD</span>
+            </button>
+            <div class="custom-amount" style="grid-column: span 2">
+              <input
+                required
+                type="number"
+                placeholder="Montant MAD"
+                class="custom-amount-input"
+                [value]="selectedAmount"
+                min="0"
+                style="margin-bottom: 0"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="grid-form">
+          <div class="grid-item">
+            <input
+              type="text"
+              id="firstName"
+              formControlName="firstName"
+              required
+              placeholder="Prenom"
+            />
+          </div>
+          <div class="grid-item">
+            <input
+              type="text"
+              id="lastName"
+              formControlName="lastName"
+              required
+              placeholder="Nom"
+            />
+          </div>
+          <div class="grid-item-full">
+            <input
+              type="email"
+              id="email"
+              formControlName="email"
+              required
+              placeholder="Email"
+            />
+          </div>
+        </div>
+        <button type="submit">Faire un Don</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="container-fluid">
+  <div class="payment-method">
+    <div
+      (click)="toggle_icon_transform_1()"
+      (click)="togglePaymentMethod('cheque')"
+      class="payment-header"
+    >
+      <div style="display: flex">
+        <span> <i class="fa-solid fa-money-check-dollar"></i> Chèque </span>
+      </div>
+
+      <span id="toggle-icon-1" class="toggle-icon"
+        ><i class="fa-solid fa-angle-up fa-beat"></i>
+      </span>
+    </div>
+    <div
+      style="padding: 0px 10px"
+      [class.open]="chequeOpen"
+      class="payment-body"
+    >
+      <p>Pour payer par chèque, envoyez le chèque à l'adresse suivante :</p>
+      <p>Adresse : [Adresse]</p>
+      <p>Assurez-vous de mentionner "Donation" au dos du chèque.</p>
+    </div>
+  </div>
+
+  <div class="payment-method">
+    <div
+      (click)="toggle_icon_transform_2()"
+      class="payment-header"
+      (click)="togglePaymentMethod('bankTransfer')"
+    >
+      <div style="display: flex">
+        <span
+          ><img
+            style="height: 20px"
+            src="../../assets/Roundicons-100-Free-Solid-Bank-transfer.512.png"
+            alt="virement icon"
+        /></span>
+        Chèque Virement Bancaire
+      </div>
+      <span id="toggle-icon-2" class="toggle-icon"
+        ><i class="fa-solid fa-angle-up fa-beat"></i
+      ></span>
+    </div>
+    <div style="padding: 0px 10px" [class.open]="bankOpen" class="payment-body">
+      <p>
+        Pour effectuer un virement bancaire, utilisez les informations bancaires
+        suivantes :
+      </p>
+      <p>Nom de la banque : [Nom de la banque]</p>
+      <p>Numéro de compte : [Numéro de compte]</p>
+    </div>
+  </div>
+</div>

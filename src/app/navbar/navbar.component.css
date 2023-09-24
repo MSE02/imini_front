@@ -1,0 +1,30 @@
+/* Ajoutez ces styles dans le fichier src/app/navbar/navbar.component.css */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    color: #333333;
+  }
+  
+  .navbar-logo {
+    max-height: 40px;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #333333;
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    color: #333333;
+    padding: 15px 20px;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #17a2b8;
+  }
+  
