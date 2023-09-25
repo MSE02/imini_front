@@ -1,6 +1,5 @@
 // donation.service.ts
 import { Injectable } from '@angular/core';
-import { DonationComponent } from './donation/donation.component';
 
 @Injectable({
   providedIn: 'root',
@@ -8,13 +7,13 @@ import { DonationComponent } from './donation/donation.component';
 export class DonationService {
   private selectedAmount: number = 0;
 
-  constructor(donationComponent :DonationComponent) {}
+  constructor() {}
 
-  getSelectedAmount() {
-    return DonationComponent.selectedAmount;
+  setselectedAmount(value: number) {
+    this.selectedAmount = value;
   }
 
-  setSelectedAmount(amount: number): void {
-    this.selectedAmount = amount;
+  getSelectedAmount(): number {
+    return this.selectedAmount;
   }
 }

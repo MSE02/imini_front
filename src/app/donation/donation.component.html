@@ -45,6 +45,7 @@
             </button>
             <div class="custom-amount" style="grid-column: span 2">
               <input
+                #customAmountInput
                 required
                 type="number"
                 placeholder="Montant MAD"
@@ -85,7 +86,7 @@
             />
           </div>
         </div>
-        <button type="submit">Faire un Don</button>
+        <button type="submit" (click)="onSubmit()">Faire un Don</button>
       </div>
     </div>
   </form>
