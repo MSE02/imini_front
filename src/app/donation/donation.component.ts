@@ -1,4 +1,10 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; // Importez ces modules
 import { DonationService } from '../donation.service';
 import { NgToastService } from 'ng-angular-popup';
@@ -7,15 +13,16 @@ import { NgToastService } from 'ng-angular-popup';
   templateUrl: './donation.component.html',
   styleUrls: ['./donation.component.css'],
 })
-export class DonationComponent {
-  donationForm: FormGroup;
+export class DonationComponent implements OnInit {
+  donationForm!: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder,
     private donationService: DonationService,
     private toast: NgToastService
-  ) {
-    // Créez le formulaire dans le constructeur
+  ) {}
+
+  ngOnInit(): void {
     this.donationForm = this.formBuilder.group(
       {
         firstName: ['', Validators.required],
@@ -26,19 +33,17 @@ export class DonationComponent {
       { updateOn: 'change' }
     );
   }
+
   tmp: number = 0;
   @ViewChild('customAmountInput', { static: false })
   customAmountInput!: ElementRef;
-
   onSubmit() {
     const inputValue = this.customAmountInput.nativeElement.value;
 
-    // Mark the form fields as touched to trigger validation
-
     if (
-      this.donationForm.get('email')?.invalid ||
-      this.donationForm.get('lastname')?.invalid ||
-      this.donationForm.get('firstname')?.invalid
+      this.donationForm.get('firstName')?.invalid ||
+      this.donationForm.get('lastName')?.invalid ||
+      this.donationForm.get('email')?.invalid
     ) {
       return;
     } else {
