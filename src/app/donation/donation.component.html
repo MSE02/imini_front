@@ -1,5 +1,10 @@
 <div class="BG_container">
-  <form [formGroup]="donationForm" (ngSubmit)="onSubmit()">
+  <form
+    [formGroup]="donationForm"
+    (ngSubmit)="onSubmit()"
+    #localForm="ngForm"
+    novalidate
+  >
     <div class="donation_forum">
       <div class="don-form">
         <p
@@ -60,30 +65,51 @@
         <div class="grid-form">
           <div class="grid-item">
             <input
+              class="form-control"
               type="text"
               id="firstName"
               formControlName="firstName"
               required
               placeholder="Prenom"
+              [class.is-invalid]="
+                localForm.submitted && donationForm.get('firstName')?.invalid
+              "
             />
+            <div style="margin-top: -10px" class="invalid-feedback">
+              first name is required
+            </div>
           </div>
           <div class="grid-item">
             <input
+              class="form-control"
               type="text"
               id="lastName"
               formControlName="lastName"
               required
               placeholder="Nom"
+              [class.is-invalid]="
+                localForm.submitted && donationForm.get('lastName')?.invalid
+              "
             />
+            <div style="margin-top: -10px" class="invalid-feedback">
+              Last name is required
+            </div>
           </div>
           <div class="grid-item-full">
             <input
+              class="form-control"
               type="email"
               id="email"
               formControlName="email"
               required
               placeholder="Email"
+              [class.is-invalid]="
+                localForm.submitted && donationForm.get('email')?.invalid
+              "
             />
+            <div style="margin-top: -10px" class="invalid-feedback">
+              email is required
+            </div>
           </div>
         </div>
         <button type="submit" (click)="onSubmit()">Faire un Don</button>

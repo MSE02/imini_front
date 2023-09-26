@@ -16,12 +16,15 @@ export class DonationComponent {
     private toast: NgToastService
   ) {
     // Créez le formulaire dans le constructeur
-    this.donationForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      amount: ['', [Validators.required, Validators.min(1)]],
-    });
+    this.donationForm = this.formBuilder.group(
+      {
+        firstName: ['', Validators.required],
+        lastName: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]],
+        amount: ['', [Validators.required, Validators.min(1)]],
+      },
+      { updateOn: 'change' }
+    );
   }
   tmp: number = 0;
   @ViewChild('customAmountInput', { static: false })
@@ -30,31 +33,41 @@ export class DonationComponent {
   onSubmit() {
     const inputValue = this.customAmountInput.nativeElement.value;
 
-    if (+inputValue < 0) {
-      console.log(inputValue);
-      this.toast.error({
-        detail: 'ERROR',
-        summary: 'Veuillez entrer un nombre positif.',
-        duration: 5000,
-        sticky: true,
-      });
-    } else if (+inputValue === 0) {
-      console.log(inputValue);
-      this.toast.warning({
-        detail: 'WARN',
-        summary: 'Veuillez entrer un nombre supérieur à zéro',
-        duration: 5000,
-        sticky: true,
-      });
+    // Mark the form fields as touched to trigger validation
+
+    if (
+      this.donationForm.get('email')?.invalid ||
+      this.donationForm.get('lastname')?.invalid ||
+      this.donationForm.get('firstname')?.invalid
+    ) {
+      return;
     } else {
-      this.donationService.setselectedAmount(+inputValue);
-      console.log(inputValue);
-      this.toast.success({
-        detail: 'SUCCESS',
-        summary: `Formulaire soumis ! ${inputValue} MAD`,
-        duration: 5000,
-        sticky: true,
-      });
+      if (+inputValue < 0) {
+        console.log(inputValue);
+        this.toast.error({
+          detail: 'ERROR',
+          summary: 'Veuillez entrer un nombre positif.',
+          duration: 5000,
+          sticky: true,
+        });
+      } else if (+inputValue === 0) {
+        console.log(inputValue);
+        this.toast.warning({
+          detail: 'WARN',
+          summary: 'Veuillez entrer un nombre supérieur à zéro',
+          duration: 5000,
+          sticky: true,
+        });
+      } else {
+        this.donationService.setselectedAmount(+inputValue);
+        console.log(inputValue);
+        this.toast.success({
+          detail: 'SUCCESS',
+          summary: `Formulaire soumis ! ${inputValue} MAD`,
+          duration: 5000,
+          sticky: true,
+        });
+      }
     }
   }
 
