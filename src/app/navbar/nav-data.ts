@@ -1,7 +1,7 @@
 export const navbarData = [
     {
       label: 'Nous connaître',
-      routeLink: '',
+      routeLink: 'about-us',
       submenus: []
     },
     {

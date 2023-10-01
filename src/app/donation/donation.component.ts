@@ -1,80 +1,11 @@
-import {
-  Component,
-  ElementRef,
-  HostListener,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms'; // Importez ces modules
-import { DonationService } from '../donation.service';
-import { NgToastService } from 'ng-angular-popup';
+import { Component, HostListener } from '@angular/core';
 @Component({
   selector: 'app-donation',
   templateUrl: './donation.component.html',
   styleUrls: ['./donation.component.css'],
 })
-export class DonationComponent implements OnInit {
-  donationForm!: FormGroup;
-
-  constructor(
-    private formBuilder: FormBuilder,
-    private donationService: DonationService,
-    private toast: NgToastService
-  ) {}
-
-  ngOnInit(): void {
-    this.donationForm = this.formBuilder.group(
-      {
-        firstName: ['', Validators.required],
-        lastName: ['', Validators.required],
-        email: ['', [Validators.required, Validators.email]],
-        amount: ['', [Validators.required, Validators.min(1)]],
-      },
-      { updateOn: 'change' }
-    );
-  }
-
-  tmp: number = 0;
-  @ViewChild('customAmountInput', { static: false })
-  customAmountInput!: ElementRef;
-  onSubmit() {
-    const inputValue = this.customAmountInput.nativeElement.value;
-
-    if (
-      this.donationForm.get('firstName')?.invalid ||
-      this.donationForm.get('lastName')?.invalid ||
-      this.donationForm.get('email')?.invalid
-    ) {
-      return;
-    } else {
-      if (+inputValue < 0) {
-        console.log(inputValue);
-        this.toast.error({
-          detail: 'ERROR',
-          summary: 'Veuillez entrer un nombre positif.',
-          duration: 5000,
-          sticky: true,
-        });
-      } else if (+inputValue === 0) {
-        console.log(inputValue);
-        this.toast.warning({
-          detail: 'WARN',
-          summary: 'Veuillez entrer un nombre supérieur à zéro',
-          duration: 5000,
-          sticky: true,
-        });
-      } else {
-        this.donationService.setselectedAmount(+inputValue);
-        console.log(inputValue);
-        this.toast.success({
-          detail: 'SUCCESS',
-          summary: `Formulaire soumis ! ${inputValue} MAD`,
-          duration: 5000,
-          sticky: true,
-        });
-      }
-    }
-  }
+export class DonationComponent {
+  constructor() {}
 
   isScreenSizeLarge = window.innerWidth > 992;
 

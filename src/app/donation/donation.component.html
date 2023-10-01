@@ -1,122 +1,3 @@
-<div class="BG_container">
-  <form
-    [formGroup]="donationForm"
-    (ngSubmit)="onSubmit()"
-    #localForm="ngForm"
-    novalidate
-  >
-    <div class="donation_forum">
-      <div class="don-form">
-        <p
-          style="
-            text-align: center;
-            height: 30px;
-            font-size: 30px;
-            margin-bottom: 15%;
-            color: #073643;
-          "
-        >
-          Faire un don
-        </p>
-        <div class="donation-amount">
-          <div class="donation-buttons">
-            <button
-              type="button"
-              (click)="selectAmount(50)"
-              class="donation-button"
-            >
-              50 <span class="donation-currency">MAD</span>
-            </button>
-            <button
-              type="button"
-              (click)="selectAmount(100)"
-              class="donation-button"
-            >
-              100 <span class="donation-currency">MAD</span>
-            </button>
-            <button
-              type="button"
-              (click)="selectAmount(200)"
-              class="donation-button"
-            >
-              200 <span class="donation-currency">MAD</span>
-            </button>
-            <button
-              type="button"
-              (click)="selectAmount(300)"
-              class="donation-button"
-            >
-              300 <span class="donation-currency">MAD</span>
-            </button>
-            <div class="custom-amount" style="grid-column: span 2">
-              <input
-                #customAmountInput
-                required
-                type="number"
-                placeholder="Montant MAD"
-                class="custom-amount-input"
-                [value]="selectedAmount"
-                min="0"
-                style="margin-bottom: 0"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="grid-form">
-          <div class="grid-item">
-            <input
-              class="form-control"
-              type="text"
-              id="firstName"
-              formControlName="firstName"
-              required
-              placeholder="Prenom"
-              [class.is-invalid]="
-                localForm.submitted && donationForm.get('firstName')?.invalid
-              "
-            />
-            <div style="margin-top: -10px" class="invalid-feedback">
-              first name is required
-            </div>
-          </div>
-          <div class="grid-item">
-            <input
-              class="form-control"
-              type="text"
-              id="lastName"
-              formControlName="lastName"
-              required
-              placeholder="Nom"
-              [class.is-invalid]="
-                localForm.submitted && donationForm.get('lastName')?.invalid
-              "
-            />
-            <div style="margin-top: -10px" class="invalid-feedback">
-              Last name is required
-            </div>
-          </div>
-          <div class="grid-item-full">
-            <input
-              class="form-control"
-              type="email"
-              id="email"
-              formControlName="email"
-              required
-              placeholder="Email"
-              [class.is-invalid]="
-                localForm.submitted && donationForm.get('email')?.invalid
-              "
-            />
-            <div style="margin-top: -10px" class="invalid-feedback">
-              email is required
-            </div>
-          </div>
-        </div>
-        <button type="submit" (click)="onSubmit()">Faire un Don</button>
-      </div>
-    </div>
-  </form>
-</div>
 <div class="container-fluid">
   <div class="payment-method">
     <div
@@ -138,9 +19,8 @@
       class="payment-body"
     >
       <p>Pour payer par chèque, envoyez le chèque à l'adresse suivante :</p>
-      <p>Adresse : [Adresse]</p>
-      <p>Assurez-vous de mentionner "Donation" au dos du chèque.</p>
-    </div>
+      <p>Adresse : azli sud 1 N°88 Marrakech Maroc</p>
+      </div>
   </div>
 
   <div class="payment-method">
@@ -167,8 +47,8 @@
         Pour effectuer un virement bancaire, utilisez les informations bancaires
         suivantes :
       </p>
-      <p>Nom de la banque : [Nom de la banque]</p>
-      <p>Numéro de compte : [Numéro de compte]</p>
+      <p>Nom de la banque : Banque Populaire</p>
+      <p>Numéro de compte : 145 450 21211 7424803 001 0 75</p>
     </div>
   </div>
 </div>

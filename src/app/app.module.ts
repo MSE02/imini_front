@@ -13,10 +13,11 @@ import { DonationComponent } from './donation/donation.component';
 import { BodyComponent } from './body/body.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PaypalComponent } from './paypal/paypal.component';
-import { DonationService } from './donation.service';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgToastComponent, NgToastModule } from 'ng-angular-popup';
+import { NgToastModule } from 'ng-angular-popup';
+import { MembresComponent } from './membres/membres.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   declarations: [
@@ -29,8 +30,10 @@ import { NgToastComponent, NgToastModule } from 'ng-angular-popup';
     BodyComponent,
     NotFoundComponent,
     PaypalComponent,
+    MembresComponent,
   ],
   imports: [
+    CarouselModule.forRoot(),
     NgToastModule,
     FormsModule,
     ReactiveFormsModule,
@@ -39,7 +42,7 @@ import { NgToastComponent, NgToastModule } from 'ng-angular-popup';
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
   ],
-  providers: [DonationService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

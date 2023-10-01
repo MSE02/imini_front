@@ -1,0 +1,16 @@
+<div class="container">
+    <div style="width: 18rem" *ngFor="let data of membresData" class="card custom-card" [@slideIn]>
+      <img
+        class="card-img-top"
+        [src]="[data.Image]"
+        alt="{{ data.Nom }} {{ data.Prenom }}"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ data.Nom }} {{ data.Nom }}</h5>
+        <p class="card-text">
+          {{ data.text }} <br />
+          {{ data.tel }}
+        </p>
+      </div>
+    </div>
+  </div>
