@@ -1,16 +1,22 @@
-<div class="container">
-    <div style="width: 18rem" *ngFor="let data of membresData" class="card custom-card" [@slideIn]>
-      <img
-        class="card-img-top"
-        [src]="[data.Image]"
-        alt="{{ data.Nom }} {{ data.Prenom }}"
-      />
-      <div class="card-body">
-        <h5 class="card-title">{{ data.Nom }} {{ data.Nom }}</h5>
-        <p class="card-text">
-          {{ data.text }} <br />
-          {{ data.tel }}
-        </p>
-      </div>
-    </div>
+<!-- membres.component.html -->
+<div class="container mt-5">
+  <div class="card">
+    <p-carousel [value]="membresData" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
+      <ng-template let-member pTemplate="item">
+        <div class="member-item">
+          <div class="member-content border-1 rounded m-2 text-center">
+            <div class="mb-3">
+              <img *ngIf="member.Image" [src]="member.Image" alt="Member Image" class="shadow member-image" />
+            </div>
+            <div>
+              <h5 class="mb-1">{{ member.Nom }} {{ member.Prenom }}</h5>
+              <p class="card-text">{{ member.text }}</p>
+              <p class="card-text">Tel: {{ member.tel }}</p>
+              <!-- Add more content as needed -->
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
   </div>
+</div>

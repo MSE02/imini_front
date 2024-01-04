@@ -1,5 +1,31 @@
-.custom-card {
-  width: 18rem;
-  margin: 10px;
-  display: inline-block;
+/* membres.component.css */
+.card {
+  margin: 20px;
+}
+
+.member-item {
+  display: flex;
+  justify-content: center;
+}
+
+.member-content {
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+}
+
+.member-image {
+  width: 75%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+  .card {
+    margin: 10px;
+  }
+
+  .member-content {
+    padding: 1rem;
+  }
 }

@@ -12,12 +12,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { DonationComponent } from './donation/donation.component';
 import { BodyComponent } from './body/body.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { PaypalComponent } from './paypal/paypal.component';
-import { ToastrModule } from 'ngx-toastr';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgToastModule } from 'ng-angular-popup';
 import { MembresComponent } from './membres/membres.component';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -29,20 +25,16 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     DonationComponent,
     BodyComponent,
     NotFoundComponent,
-    PaypalComponent,
     MembresComponent,
   ],
   imports: [
-    CarouselModule.forRoot(),
-    NgToastModule,
+    CarouselModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
-    ToastrModule.forRoot(),
-    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
