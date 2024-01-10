@@ -1,22 +1,46 @@
-<!-- membres.component.html -->
+<div class="space" style="background-color: rgba(108, 126, 125, 0.281)">
+  <div class="col-md-6 ">
+    <div class="intro-section">
+      <h2 class="mb-4">NOTRE ÉQUIPE DE DIRECTION</h2>
+      <p>
+        Bienvenue sur notre plateforme dédiée aux membres de notre communauté.
+        Nous sommes fiers de présenter une équipe dynamique et diversifiée,
+        composée de professionnels engagés dans des domaines variés. Chacun de
+        nos membres apporte son expertise, son savoir-faire et sa passion,
+        contribuant ainsi à l'épanouissement de notre communauté. Explorez cette
+        section pour en apprendre davantage sur les membres qui font la richesse
+        et la force de notre groupe. Nous sommes impatients de vous faire
+        découvrir les visages et les talents qui façonnent notre communauté au
+        quotidien.
+      </p>
+    </div>
+  </div>
+</div>
 <div class="container mt-5">
-  <div class="card">
-    <p-carousel [value]="membresData" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
-      <ng-template let-member pTemplate="item">
-        <div class="member-item">
-          <div class="member-content border-1 rounded m-2 text-center">
-            <div class="mb-3">
-              <img *ngIf="member.Image" [src]="member.Image" alt="Member Image" class="shadow member-image" />
-            </div>
-            <div>
-              <h5 class="mb-1">{{ member.Nom }} {{ member.Prenom }}</h5>
-              <p class="card-text">{{ member.text }}</p>
-              <p class="card-text">Tel: {{ member.tel }}</p>
-              <!-- Add more content as needed -->
-            </div>
+  <p-carousel
+    [value]="membresData"
+    [numVisible]="3"
+    [numScroll]="1"
+    [responsiveOptions]="responsiveOptions"
+  >
+    <ng-template let-member pTemplate="item">
+      <div class="member-item">
+        <div class="member-content border-1 rounded m-2 text-center">
+          <div class="mb-3">
+            <img
+              *ngIf="member.Image"
+              [src]="member.Image"
+              alt="Member Image"
+              class="shadow member-image"
+            />
+          </div>
+          <div>
+            <h5 class="mb-1">{{ member.Nom }} {{ member.Prenom }}</h5>
+            <p class="card-text">{{ member.text }}</p>
+            <p class="card-text">Tel: {{ member.tel }}</p>
           </div>
         </div>
-      </ng-template>
-    </p-carousel>
-  </div>
+      </div>
+    </ng-template>
+  </p-carousel>
 </div>

@@ -3,9 +3,21 @@
   margin: 20px;
 }
 
+.intro-section p {
+  line-height: 30px;
+  color: #4c5559;
+  font-size: 16px;
+}
+.intro-section h2 {
+  color: #122b32;
+  font-size: 24px;
+}
 .member-item {
   display: flex;
   justify-content: center;
+}
+.space{
+  padding: 50px 50px;
 }
 
 .member-content {
@@ -15,17 +27,16 @@
 }
 
 .member-image {
-  width: 75%;
+  width: 55%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 /* Responsive styles */
-@media (max-width: 576px) {
-  .card {
-    margin: 10px;
-  }
+@media (max-width: 765px) {
 
-  .member-content {
-    padding: 1rem;
-  }
+.space{
+  padding: 10px 0;
+}
+
+
 }

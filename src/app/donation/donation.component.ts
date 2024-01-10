@@ -1,12 +1,15 @@
 import { Component, HostListener } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-donation',
   templateUrl: './donation.component.html',
   styleUrls: ['./donation.component.css'],
 })
 export class DonationComponent {
-  constructor() {}
-
+  constructor(private titleService: Title) {}
+  ngOnInit() {
+    this.titleService.setTitle('Donation');
+  }
   isScreenSizeLarge = window.innerWidth > 992;
 
   @HostListener('window:resize', ['$event'])

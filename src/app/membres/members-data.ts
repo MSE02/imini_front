@@ -30,7 +30,7 @@ export const membresData = [
   {
     Nom: 'Marbouhi',
     Prenom: 'Abdellah',
-    Image: '',
+    Image: '../../assets/membres/abdeljalil elmoutaki.jpg',
     text: 'Trésorier',
     tel: '0661240748',
   },
@@ -51,7 +51,7 @@ export const membresData = [
   {
     Nom: 'Baâdil',
     Prenom: 'Lhsen',
-    Image: '',
+    Image: '../../assets/membres/abdeljalil elmoutaki.jpg',
     text: 'Conseiller',
     tel: '',
   },

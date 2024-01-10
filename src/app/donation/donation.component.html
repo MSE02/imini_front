@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container my-5">
   <div class="payment-method">
     <div
       (click)="toggle_icon_transform_1()"
@@ -13,14 +13,10 @@
         ><i class="fa-solid fa-angle-up fa-beat"></i>
       </span>
     </div>
-    <div
-      style="padding: 0px 10px"
-      [class.open]="chequeOpen"
-      class="payment-body"
-    >
+    <div [class.open]="chequeOpen" class="payment-body">
       <p>Pour payer par chèque, envoyez le chèque à l'adresse suivante :</p>
       <p>Adresse : azli sud 1 N°88 Marrakech Maroc</p>
-      </div>
+    </div>
   </div>
 
   <div class="payment-method">
@@ -42,7 +38,7 @@
         ><i class="fa-solid fa-angle-up fa-beat"></i
       ></span>
     </div>
-    <div style="padding: 0px 10px" [class.open]="bankOpen" class="payment-body">
+    <div [class.open]="bankOpen" class="payment-body">
       <p>
         Pour effectuer un virement bancaire, utilisez les informations bancaires
         suivantes :
