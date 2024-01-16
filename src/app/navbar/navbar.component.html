@@ -6,16 +6,21 @@
     position: sticky;
     top: 0;
     width: 100%;
-    transition: top 0.7s;
+    transition: top 0.3s;
   "
 >
   <div class="container">
-    <a href="/home" class="navbar-brand">
+    <a
+      style="display: flex; align-items: center"
+      href="/home"
+      class="navbar-brand"
+    >
       <img
-        style="height: 100px; padding-left: 30%"
+        style="height: 60px; padding-left: 10%"
         src="../../assets/logo.png"
         alt="Association Imini"
       />
+      <h3 class="logo-text">Association Imini</h3>
     </a>
     <button
       style="margin-right: 5%"
@@ -29,15 +34,19 @@
     >
       <span><i class="fas fa-bars"></i></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbar">
+    <div
+      style="flex-direction: row-reverse"
+      class="collapse navbar-collapse"
+      id="navbar"
+    >
       <ul class="navbar-nav">
         <li
-          style="padding-right: 20px; padding-left: 20px"
+          style="padding-right: 10px; padding-left: 10px"
           class="nav-item"
           *ngFor="let data of navData"
         >
           <a
-            style="font-size: 21px"
+            style="font-size: 1rem"
             class="nav-link"
             [routerLink]="[data.routeLink]"
             routerLinkActive="active"

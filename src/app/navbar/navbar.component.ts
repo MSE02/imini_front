@@ -18,7 +18,7 @@ export class NavbarComponent implements AfterViewInit {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
       if (scrollTop > lastScrollTop) {
-        stickyNav.style.top = '-130px';
+        stickyNav.style.top = '-100%';
       } else {
         stickyNav.style.top = '0';
       }

@@ -16,7 +16,12 @@
 .navbar-toggler-icon {
   background-color: #333333;
 }
-
+.logo-text {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  height: fit-content;
+  margin: 0 0 0 12px;
+}
 .navbar-nav .nav-item .nav-link {
   color: #333333;
   padding: 15px 20px;
